@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'argusapm'
 android {
+    useLibrary 'org.apache.http.legacy'
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.xiaweizi.apmdemo"
