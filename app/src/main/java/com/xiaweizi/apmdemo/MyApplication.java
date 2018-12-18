@@ -28,13 +28,12 @@ public class MyApplication extends Application {
                 .setRuleRequest(new RuleSyncRequest())
                 .setUpload(new CollectDataSyncUpload())
                 .setAppName("APPDemo")
-                .setAppVersion("1.0.0")
+                .setAppVersion("0.0.1")
                 .setApmid("gqg0ocoehiz6");//该ID是在APM的后台进行申请的
 
         //builder.setEnabled(ApmTask.FLAG_COLLECT_ACTIVITY_AOP); //activity采用aop方案时打开，默认关闭即可。
         builder.setEnabled(ApmTask.FLAG_LOCAL_DEBUG); //是否读取本地配置，默认关闭即可。
         Client.attach(builder.build());
-        Client.isDebugOpen(true);//设置成true的时候将会打开悬浮窗
         Client.startWork();
     }
 
